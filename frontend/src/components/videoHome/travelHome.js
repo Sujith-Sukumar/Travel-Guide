@@ -3,7 +3,7 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import './travelHome.css'
 
 const VideoPlayer = () => {
-  const videoUrl = "http://localhost:4000/file/Wildlife.mp4";
+  const videoUrl = "https://travel-guide-backend-pfri.onrender.com/file/Wildlife.mp4";
   const videoRef = useRef(null);
   const [Muted, setMuted] = useState(true);
   const [Playing, setPlaying] = useState(true);
