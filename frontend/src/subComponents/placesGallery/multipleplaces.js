@@ -16,7 +16,7 @@ function Multipleplaces() {
     const fetchimage = async () => {
       if (!statename) return;
       try {
-        const response = await fetch(`http://localhost:4000/search/attra?filename=explore${statename}`);
+        const response = await fetch(`https://travel-guide-backend-pfri.onrender.com/search/attra?filename=explore${statename}`);
         const data = await response.json();
         setImage(data)
         console.log(data, 'data');
