@@ -12,7 +12,7 @@ function BookedFlight() {
         const fetchBooking = async () => {
             const token = localStorage.getItem('token')
             try {
-                const response = await fetch('http://localhost:4000/flight/search', {
+                const response = await fetch('https://travel-guide-backend-pfri.onrender.com/flight/search', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -31,7 +31,7 @@ function BookedFlight() {
     const queryDeletion = (id) => {
         alert('booking canceled')
         navigate('/')
-        fetch(`http://localhost:4000/flight/delete/${id}`,
+        fetch(`https://travel-guide-backend-pfri.onrender.com/flight/delete/${id}`,
             {
                 method: 'DELETE'
             })
