@@ -17,7 +17,7 @@ function CartPlaceDetails() {
     console.log("Fetching ID:", id);
     if (!id) return;
 
-    fetch(`http://localhost:4000/cart/search/${id}`)
+    fetch(`https://travel-guide-backend-pfri.onrender.com/cart/search/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.image && data.image.data) {
@@ -60,7 +60,7 @@ function CartPlaceDetails() {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const res = await fetch(`http://localhost:4000/search?filename=${image.statename}`);
+        const res = await fetch(`https://travel-guide-backend-pfri.onrender.com/search?filename=${image.statename}`);
         const data = await res.json();
         console.log('Fetched data:', data);
 
