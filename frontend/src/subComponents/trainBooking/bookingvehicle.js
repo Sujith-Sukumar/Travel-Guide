@@ -15,7 +15,7 @@ function Bookingvehicle() {
    useEffect(() => {
           const fetchImage = async () => {
               try {
-                  const response = await fetch('http://localhost:4000/bookingimage/train.jpg');
+                  const response = await fetch('https://travel-guide-backend-pfri.onrender.com/bookingimage/train.jpg');
                   const blob = await response.blob();
                   const imageUrl = URL.createObjectURL(blob);
   
@@ -79,7 +79,7 @@ function Bookingvehicle() {
     const token = localStorage.getItem('token')
 
     try {
-      const respone = await fetch('http://localhost:4000/book/trains', {
+      const respone = await fetch('https://travel-guide-backend-pfri.onrender.com/book/trains', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
