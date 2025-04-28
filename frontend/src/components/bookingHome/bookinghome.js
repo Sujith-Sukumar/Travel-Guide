@@ -247,7 +247,7 @@ const Booking = () => {
                 else if (activeOption === 'buses') imageName = 'bus.jpg';
                 else if (activeOption === 'cabs') imageName = 'cab.jpg';
 
-                const response = await fetch(`http://localhost:4000/bookingimage/${imageName}`);
+                const response = await fetch(`https://travel-guide-backend-pfri.onrender.com/bookingimage/${imageName}`);
                 const blob = await response.blob();
                 const imageUrl = URL.createObjectURL(blob);
 
