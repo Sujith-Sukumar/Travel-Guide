@@ -69,7 +69,7 @@ function CartedPlaces() {
  useEffect(() => {
             const fetchImage = async () => {
                 try {
-                    const response = await fetch('http://localhost:4000/bookingimage/cart1.jpg');
+                    const response = await fetch('https://travel-guide-backend-pfri.onrender.com/bookingimage/cart1.jpg');
                     const blob = await response.blob();
                     const imageUrl = URL.createObjectURL(blob);
                     console.log(imageUrl);
