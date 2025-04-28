@@ -23,7 +23,7 @@ function TravelStates() {
   useEffect(() => {
     const fetchimage = async () => {
       try {
-        const response = await fetch('http://localhost:4000/searchstateimage?filename=state')
+        const response = await fetch('https://travel-guide-backend-pfri.onrender.com/searchstateimage?filename=state')
         const data = await response.json();
         setImages(data)
         console.log(data,'destinations');
