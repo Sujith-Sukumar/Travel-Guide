@@ -31,7 +31,7 @@ app.use(cors({
 
 const connectToDb = async () => {
     try {
-        await mongoose.connect('mongodb+srv://sujithkallingalwork:jA9eYvIRyD9ztF8M@cluster0.klvzeyj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+        await mongoose.connect('mongodb+srv://sujithkallingalwork:jA9eYvIRyD9ztF8M@cluster0.klvzeyj.mongodb.net/travelguide?retryWrites=true&w=majority&appName=Cluster0')
         console.log('database connected');
 
     } catch (error) {
