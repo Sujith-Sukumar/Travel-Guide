@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.flight-booking-container {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    background-blend-mode: overlay;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.466);
+
+}
+
+/* .flight-booking-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+} */
+
+.flight-swap-icon {
+    margin-top: 1.5%;
+}
+
+.flight-booking-header {
+    padding: 30px;
+    margin-top: 40px;
+    color: #ffffffb3;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.flight-booking-search-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+
+}
+
+.flight-booking-search-item {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    flex: 1 1 auto;
+    min-width: 120px;
+    z-index: 10;
+
+}
+
+input[type="text"] {
+    border: 1px #ccc;
+    font-style: italic;
+
+}
+
+.flight-booking-search-item input:focus {
+    outline: none;
+    border: 2px solid rgb(109, 197, 232);
+}
+
+.flight-booking-search-item label {
+    margin-bottom: 5px;
+    font-size: 13px;
+    text-align: start;
+    font-weight: 700;
+}
+
+.flight-booking-search-item input,
+.flight-booking-search-item select {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.flight-booking-search-item input:focus {
+    border: 2px solid blue;
+}
+
+.flight-item {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-info,
+.flight-time,
+.flight-price {
+    text-align: center;
+}
+
+.flight-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flight-time h2 {
+    margin: 2px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.flight-time span {
+    margin: 2px 0;
+    font-size: 0.8em;
+    color: #1abc9c;
+}
+
+.flight-price p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.flight-item button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flight-item button:hover {
+    background-color: #2980b9;
+}
+
+.flight-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.flight-item {
+    background-color: #ffffff93;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 300px;
+    max-width: 350px;
+    width: 100%;
+    margin: 10px;
+    z-index: 10;
+    transition: transform 0.3s ease;
+
+}
+
+.flight-ltem:hover {
+    transform: scale(1.05);
+    z-index: 20;
+}
+
+.flight-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flight-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.departure-time,
+.arrival-time {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.non-stop {
+    font-size: 1em;
+    color: #075d4c;
+}
+
+.destination {
+    font-size: 1em;
+    color: #555;
+    margin: 0 5px;
+}
+
+.flight-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.book-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.book-btn:hover {
+    background-color: #2980b9;
+}
+
+.selected-flight {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}

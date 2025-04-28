@@ -1,0 +1,141 @@
+.slick-slide {
+    transition: transform 0.8s ease-in-out !important;
+}
+
+.attractions-container {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 50px 0;
+    background-color: hsl(204, 24%, 96%);
+}
+
+.state-headingg {
+    font-size: 90px;
+    color: #66B2E2;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8%;
+    font-weight: 1000;
+    position: absolute;
+}
+
+.state-sub-headingg {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    font-size: 35px;
+    color: #66B2E2;
+}
+
+.attractions-slider {
+    position: absolute;
+    top: 28%;
+    left: 5%;
+    width: 90%;
+}
+
+.attraction-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 25px 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.attraction-card:hover {
+    transform: scale(1.08);
+}
+
+.attraction-card:hover .btn-more {
+    transform: translateX(-50%) scale(1.05);
+    opacity: 1;
+}
+
+.btn-more {
+    background-color: #66B2E2 !important;
+    border: none !important;
+    position: absolute;
+    /* bottom: 22%; */
+    top: 75%;
+    left: 50%;
+    border-radius: 10px !important;
+    transform: translateX(-50%) scale(0.9);
+    width: auto;
+    padding: 5px 10px !important;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.attraction-image {
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.attraction-name {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .state-heading {
+        font-size: 40px;
+    }
+
+    .state-sub-heading {
+        font-size: 20px;
+    }
+
+    .attraction-image {
+        height: 300px;
+    }
+    .btn-more {
+        top: 70%;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .state-headingg {
+        font-size: 60px !important;
+    }
+
+    .state-sub-headingg {
+        font-size: 25px;
+    }
+
+    .attraction-image {
+        height: 250px;
+    }
+    .btn-more {
+        top: 65%;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .state-headingg {
+        font-size: 40px !important;
+    }
+
+    .state-sub-headingg {
+        font-size: 16px;
+    }
+
+    .attraction-image {
+        height: 200px;
+    }
+    .btn-more {
+        top: 60%;
+        font-size: 10px;
+    }
+}

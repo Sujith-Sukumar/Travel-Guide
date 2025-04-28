@@ -1,0 +1,158 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.state-container {
+  position: absolute;
+  bottom: 18%;
+  left: 48%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.state-names {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10;
+}
+
+.more {
+  font-weight: 700 !important;
+  color: white !important;
+  background-color: red !important;
+  border-radius: 30px !important;
+  padding: 9px 20px !important;
+  font-size: 18px !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+.state-icon {
+  cursor: pointer;
+  color: white;
+  font-size: 40px;
+  margin: 0 25px;
+  transition: transform 0.2s ease;
+}
+
+.state-icon:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+.state-heading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8%;
+  font-weight: 1000;
+  color: #FFFFFF !important;
+  font-size: 100px !important;
+  z-index: 10;
+}
+
+.state-sub-heading {
+  position: relative;
+  text-align: center;
+  color: white !important;
+  font-size: 40px !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .state-container {
+    bottom: 15%;
+  }
+
+  .state-names {
+    font-size: 32px;
+  }
+
+  .more {
+    font-size: 16px !important;
+    padding: 8px 16px !important;
+  }
+
+  .state-heading {
+    font-size: 80px !important;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .state-container {
+    bottom: 10%;
+  }
+
+  .state-names {
+    font-size: 30px;
+  }
+
+  .more {
+    font-size: 16px !important;
+    padding: 6px 12px !important;
+  }
+
+  .state-heading {
+    font-size: 60px !important;
+
+  }
+
+  .state-sub-heading {
+    font-size: 28px !important;
+
+  }
+}
+
+@media (max-width: 575px) {
+  .state-heading {
+    font-size: 50px !important;
+
+  }
+
+  .state-sub-heading {
+    font-size: 30px;
+  }
+}

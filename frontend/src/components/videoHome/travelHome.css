@@ -1,0 +1,29 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.video-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+video {
+  cursor: pointer;
+}
+
+.mute-button {
+  position: absolute;
+  bottom: 22%;
+  right: 6%;
+  color: white;
+  cursor: pointer;
+  font-size: 2vw;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+}

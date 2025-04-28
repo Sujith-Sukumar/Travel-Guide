@@ -1,0 +1,61 @@
+.booked-flights-container {
+    margin-top: 60px !important;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.no-bookings {
+    color: gray;
+    font-size: 18px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cardd {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardd:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardd-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cardd p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.cardd p span {
+    font-weight: bold;
+    color: #333;
+}
+
+.cancel-btn {
+    max-width: 100px;
+    align-self: flex-end;
+}

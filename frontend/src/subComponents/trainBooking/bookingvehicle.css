@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.transportation-booking-container {
+    width: 100%;
+    min-height: 100vh; 
+    padding: 20px;
+    background-blend-mode: darken; 
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative; 
+}
+
+
+.flight-swap-icon {
+    margin-top: 1.5%;
+}
+
+.flight-booking-header {
+    padding: 30px;
+    color: #ffffffb3;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.flight-booking-search-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+
+}
+
+.flight-booking-search-item {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    flex: 1 1 auto;
+    min-width: 120px;
+    z-index: 10;
+
+}
+
+input[type="text"] {
+    border: 1px #ccc;
+    font-style: italic;
+
+}
+
+.flight-booking-search-item input:focus {
+    outline: none;
+    border: 2px solid rgb(109, 197, 232);
+}
+
+.flight-booking-search-item label {
+    margin-bottom: 5px;
+    font-size: 13px;
+    text-align: start;
+    font-weight: 700;
+}
+
+.flight-booking-search-item input,
+.flight-booking-search-item select {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.flight-booking-search-item input:focus {
+    border: 2px solid rgb(255, 17, 0);
+}

@@ -1,0 +1,249 @@
+.background-image {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-blend-mode: darken;
+}
+
+.background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.bg-heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    font-weight: 1000;
+    color: #FFFFFF !important;
+    font-size: 100px !important;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.transport-options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 50px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 700;
+    font-size: 1.4vw;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+
+.option.active {
+    background-color: red;
+    color: #fff;
+}
+
+.option:hover {
+    background-color: red;
+    border: none
+}
+
+.option i {
+    font-size: 20px;
+    color: white !important;
+}
+
+.trip-option:active {
+    color: red;
+    text-decoration: underline;
+    z-index: 2;
+
+}
+
+.booking-container {
+    padding: 20px;
+    color: #fff;
+    width: 90%;
+    max-width: 1400px;
+    position: absolute;
+    top: 45%;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.input-field {
+    background: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    flex: 1;
+    min-width: 20px;
+    font-weight: bold;
+}
+
+.input-field:focus {
+    outline: none;
+    border: 2px solid rgb(109, 197, 232)
+}
+
+.swap-icon {
+    background: #fff;
+    border-radius: 50%;
+    padding: 8px 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+.fare-type {
+    margin-top: 15px;
+}
+
+.fare-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.fare-item {
+    background: #fff;
+    color: #000;
+    border-radius: 6px;
+    padding: 10px 5px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.search-btnn {
+    background: #ccc;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100px;
+    font-size: 18px;
+}
+
+.search-btnn:hover {
+    color: white;
+    background-color: red;
+}
+
+@media (max-width: 1024px) {
+    .bg-heading {
+        font-size: 80px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .background-image {
+        background-position: top;
+    }
+
+    .bg-heading {
+        font-size: 70px !important;
+    }
+
+    .option {
+        padding: 12px 35px;
+    }
+
+    .transport-options {
+        top: 25%;
+    }
+
+    .booking-container {
+        top: 45%;
+    }
+
+    .input-field {
+        padding: 5px;
+    }
+
+    .search-btn {
+        padding: 5px 10px;
+        max-width: 100px;
+    }
+
+    .fare-type {
+        margin-top: -25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .bg-heading {
+        font-size: 50px !important;
+    }
+
+    .input-field {
+        padding: 2px;
+
+    }
+    .transport-options div {
+        font-size: 10px;
+    }
+   
+    .fare-item {
+        padding: 2px;
+    }
+
+    .fare-type {
+        margin-top: -25px;
+    }
+    .fare-type span {
+        margin-top: -25px;
+        font-size: 0rem;
+    }
+    .search-btnn {
+        font-size: 15px;
+        width: 70px ;
+        padding: 5px 2px;
+    }
+
+}
