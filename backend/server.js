@@ -42,10 +42,17 @@ const connectToDb = async () => {
 connectToDb()
 
 let gfs, gfsBucket;
-conn.once('open', () => {
+conn.once('open',async () => {
     gfs = Grid(conn.db, mongoose.mongo);
     gfs.collection('uploads')
     gfsBucket = new GridFSBucket(conn.db, { bucketName: 'uploads' });
+
+     try {
+        await conn.db.collection('uploads.chunks').createIndex({ files_id: 1, n: 1 });
+        console.log('GridFS chunks index created successfully');
+    } catch (error) {
+        console.error('Error creating GridFS index:', error);
+    }
 });
 
 const storage = new GridFsStorage({
