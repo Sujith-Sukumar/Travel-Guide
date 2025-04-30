@@ -77,48 +77,21 @@ app.post('/upload', upload.single('file'), (req, res) => {
         res.status(500).json({ error: 'Internel server error' })
     }
 });
-
 app.get('/file/:filename', async (req, res) => {
     try {
         const db = mongoose.connection.db;
-        const bucket = new mongoose.mongo.GridFSBucket(db, { bucketName: 'uploads' });
-        const file = await db.collection('uploads.files').findOne({ filename: req.params.filename });
-
+        const bucket = new mongoose.mongo.GridFSBucket(db, { bucketName: 'uploads' })
+        const file = await db.collection('uploads.files').findOne({ filename: req.params.filename })
         if (!file) {
-            return res.status(404).json({ message: 'File not found' });
+            return res.status(404).json({ message: 'File not found' })
         }
-
-        const range = req.headers.range;
-        if (!range) {
-            return res.status(416).send('Range header required');
-        }
-
-        const videoSize = file.length;
-        const CHUNK_SIZE = 1 * 1e6;
-
-        const start = Number(range.replace(/\D/g, ""));
-        const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
-
-        const contentLength = end - start + 1;
-        const headers = {
-            "Content-Range": `bytes ${start}-${end}/${videoSize}`,
-            "Accept-Ranges": "bytes",
-            "Content-Length": contentLength,
-            "Content-Type": file.contentType,
-        };
-
-        res.writeHead(206, headers);
-
-        const downloadStream = bucket.openDownloadStream(file._id, {
-            start,
-            end: end + 1, 
-        });
-
-        downloadStream.pipe(res);
+        res.setHeader('Content-Type', file.contentType)
+        const readStream = bucket.openDownloadStream(file._id);
+        readStream.pipe(res);
     } catch (error) {
-        res.status(500).json({ error: 'Error retrieving file', detail: error.message });
+        res.status(500).json({ error: 'Error retrieving file', error })
     }
-});
+})
 
 
 const imagestorage = multer.memoryStorage();
