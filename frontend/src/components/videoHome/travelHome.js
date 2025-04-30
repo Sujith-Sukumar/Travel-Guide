@@ -28,7 +28,7 @@ const VideoPlayer = () => {
 
   return (
     <div className="video-container">
-      <video ref={videoRef} className="video" autoPlay loop onClick={videoPlay} muted={Muted} preload="auto">
+      <video ref={videoRef} className="video" autoPlay loop onClick={videoPlay} muted={Muted} >
         <source src={videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
