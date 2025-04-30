@@ -16,7 +16,7 @@ function Placedetails() {
   useEffect(() => {
     console.log("Fetching ID:", id);
     if (!id) return;
-    fetch(`http://localhost:4000/search/${id}`)
+    fetch(`https://travel-guide-backend-pfri.onrender.com/search/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.image && data.image.data) {
@@ -53,7 +53,7 @@ function Placedetails() {
     try {
       const token = localStorage.getItem('token');
 
-      const cartRes = await fetch('http://localhost:4000/bookmark/search', {
+      const cartRes = await fetch('https://travel-guide-backend-pfri.onrender.com/bookmark/search', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -83,7 +83,7 @@ function Placedetails() {
       formData.append('filename', image.filename);
       formData.append('imageType', image.imageType);
 
-      const response = await fetch('http://localhost:4000/bookmark', {
+      const response = await fetch('https://travel-guide-backend-pfri.onrender.com/bookmark', {
         method: 'POST',
         body: formData,
         headers: {

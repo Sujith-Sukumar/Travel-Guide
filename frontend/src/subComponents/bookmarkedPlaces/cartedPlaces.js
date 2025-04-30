@@ -11,7 +11,7 @@ function CartedPlaces() {
 
   useEffect(() => {
     const token = localStorage.getItem('token')
-    fetch('http://localhost:4000/bookmark/search', {
+    fetch('https://travel-guide-backend-pfri.onrender.com/bookmark/search', {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -30,7 +30,7 @@ function CartedPlaces() {
         const imageDataArray = await Promise.all(
           cartPlace.map(async (item) => {
             console.log(`Fetching image for: ${item.filename}`);
-            const res = await fetch(`http://localhost:4000/search/attra?filename=${item.filename}`);
+            const res = await fetch(`https://travel-guide-backend-pfri.onrender.com/search/attra?filename=${item.filename}`);
             if (!res.ok) {
               console.error(`Failed to fetch image for ${item.filename}`);
               return null;
@@ -56,7 +56,7 @@ function CartedPlaces() {
     navigate('/')
     alert('Bookmarked Removed')
     try {
-      const res = await fetch(`http://localhost:4000/bookmark/delete/${id}`);
+      const res = await fetch(`https://travel-guide-backend-pfri.onrender.com/bookmark/delete/${id}`);
       const data = await res.json();
       console.log(data);
 
@@ -67,7 +67,7 @@ function CartedPlaces() {
  useEffect(() => {
             const fetchImage = async () => {
                 try {
-                    const response = await fetch('http://localhost:4000/bookingimage/cart1.jpg');
+                    const response = await fetch('https://travel-guide-backend-pfri.onrender.com/bookingimage/cart1.jpg');
                     const blob = await response.blob();
                     const imageUrl = URL.createObjectURL(blob);
                     console.log(imageUrl);

@@ -23,7 +23,7 @@ const conn = mongoose.connection;
 const SECRET = process.env.JWT_SECRET;
 
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin:true,
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -31,7 +31,7 @@ app.use(cors({
 
 const connectToDb = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/travelguide')
+        await mongoose.connect('mongodb+srv://sujithkallingalwork:jA9eYvIRyD9ztF8M@cluster0.klvzeyj.mongodb.net/travelguide?retryWrites=true&w=majority&appName=Cluster0')
         console.log('database connected');
 
     } catch (error) {
@@ -42,10 +42,17 @@ const connectToDb = async () => {
 connectToDb()
 
 let gfs, gfsBucket;
-conn.once('open', () => {
+conn.once('open',async () => {
     gfs = Grid(conn.db, mongoose.mongo);
     gfs.collection('uploads')
     gfsBucket = new GridFSBucket(conn.db, { bucketName: 'uploads' });
+
+     try {
+        await conn.db.collection('uploads.chunks').createIndex({ files_id: 1, n: 1 });
+        console.log('GridFS chunks index created successfully');
+    } catch (error) {
+        console.error('Error creating GridFS index:', error);
+    }
 });
 
 const storage = new GridFsStorage({

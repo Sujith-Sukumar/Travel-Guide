@@ -13,7 +13,7 @@ function Attractions() {
     useEffect(() => {
         const fetchimage = async () => {
             try {
-                const response = await fetch(`http://localhost:4000/search/attra?filename=attra`)
+                const response = await fetch(`https://travel-guide-backend-pfri.onrender.com/search/attra?filename=attra`)
                 const data = await response.json();
                 setImage(data);
                 // console.log(data,'fetched attraction');    

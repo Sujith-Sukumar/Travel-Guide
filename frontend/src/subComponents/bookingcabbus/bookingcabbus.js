@@ -31,7 +31,7 @@ function Bookingcabbus() {
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const response = await fetch(`http://localhost:4000/bookingimage/${sampletravelType}`);
+                const response = await fetch(`https://travel-guide-backend-pfri.onrender.com/bookingimage/${sampletravelType}`);
                 const blob = await response.blob();
                 const imageUrl = URL.createObjectURL(blob);
     
@@ -68,7 +68,7 @@ function Bookingcabbus() {
 
         const token = localStorage.getItem('token')
         const busBooking = async () => {
-            const res = await fetch('http://localhost:4000/book/buses', {
+            const res = await fetch('https://travel-guide-backend-pfri.onrender.com/book/buses', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
@@ -94,7 +94,7 @@ function Bookingcabbus() {
         console.log(combinedData);
         const token = localStorage.getItem('token')
         const cabbooking = async () => {
-            const res = await fetch('http://localhost:4000/book/cabs', {
+            const res = await fetch('https://travel-guide-backend-pfri.onrender.com/book/cabs', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",

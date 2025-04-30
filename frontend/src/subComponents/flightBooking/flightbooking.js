@@ -19,7 +19,7 @@ const FlightBooking = () => {
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const response = await fetch('http://localhost:4000/bookingimage/airplane1.jpg');
+                const response = await fetch('https://travel-guide-backend-pfri.onrender.com/bookingimage/airplane1.jpg');
                 const blob = await response.blob();
                 const imageUrl = URL.createObjectURL(blob);
 
@@ -98,7 +98,7 @@ const FlightBooking = () => {
         // navigate('/bookedflight')
 
         try {
-            const response = await fetch('http://localhost:4000/book/flights', {
+            const response = await fetch('https://travel-guide-backend-pfri.onrender.com/book/flights', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

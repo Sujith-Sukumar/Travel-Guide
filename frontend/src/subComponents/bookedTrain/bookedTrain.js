@@ -11,7 +11,7 @@ function BookedTrain() {
         const fetchBooking = async () => {
             const token = localStorage.getItem('token')
             try {
-                const response = await fetch('http://localhost:4000/train/search', {
+                const response = await fetch('https://travel-guide-backend-pfri.onrender.com/train/search', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -29,7 +29,7 @@ function BookedTrain() {
     const queryDeletion = (id) => {
         alert('booking canceled')
         navigate('/')
-        fetch(`http://localhost:4000/train/delete/${id}`, {
+        fetch(`https://travel-guide-backend-pfri.onrender.com/train/delete/${id}`, {
             method: 'DELETE'
         })
             .then((res) => res.json())

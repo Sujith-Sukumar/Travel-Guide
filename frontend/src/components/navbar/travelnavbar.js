@@ -23,7 +23,7 @@ const Travelnavbar = () => {
         const searchdata = event.target.value.trim();
 
         try {
-            const response = await fetch(`http://localhost:4000/search/attra?filename=${searchdata}`)
+            const response = await fetch(`https://travel-guide-backend-pfri.onrender.com/search/attra?filename=${searchdata}`)
             const getdata = await response.json()
             if (searchdata === "") {
                 setSearchedd([]);
@@ -72,7 +72,7 @@ const Travelnavbar = () => {
     }, [searchInput]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/destination/get')
+        fetch('https://travel-guide-backend-pfri.onrender.com/destination/get')
             .then(res => res.json())
             .then(data => {
                 setDestinations(data);

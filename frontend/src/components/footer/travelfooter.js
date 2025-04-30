@@ -14,7 +14,7 @@ function Travelfooter() {
     useEffect(() => {
             const fetchImage = async () => {
                 try {
-                    const response = await fetch('http://localhost:4000/bookingimage/scanner.jpg');
+                    const response = await fetch('https://travel-guide-backend-pfri.onrender.com/bookingimage/scanner.jpg');
                     const blob = await response.blob();
                     const imageUrl = URL.createObjectURL(blob);
     
@@ -34,7 +34,7 @@ function Travelfooter() {
         useEffect(() => {
             const fetchImage = async () => {
                 try {
-                    const response = await fetch('http://localhost:4000/bookingimage/attractiongoldentemple.jpg');
+                    const response = await fetch('https://travel-guide-backend-pfri.onrender.com/bookingimage/attractiongoldentemple.jpg');
                     const blob = await response.blob();
                     const imageUrl = URL.createObjectURL(blob);
     

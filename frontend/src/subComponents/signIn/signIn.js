@@ -20,7 +20,7 @@ function SignInUp() {
         localStorage.setItem('username', userInfo.username)
 
         const login = async () => {
-            const res = await fetch('http://localhost:4000/login', {
+            const res = await fetch('https://travel-guide-backend-pfri.onrender.com/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(userInfo)
@@ -48,7 +48,7 @@ function SignInUp() {
       localStorage.setItem('username', userInfo.username);
 
       const signup = async () => {
-          const res = await fetch('http://localhost:4000/signup', {
+          const res = await fetch('https://travel-guide-backend-pfri.onrender.com/signup', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(userInfo)
