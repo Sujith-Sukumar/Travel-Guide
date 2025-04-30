@@ -16,8 +16,7 @@ function Attractions() {
                 const response = await fetch(`http://localhost:4000/search/attra?filename=attra`)
                 const data = await response.json();
                 setImage(data);
-                console.log(data,'fetched attraction');
-                
+                // console.log(data,'fetched attraction');    
                 data.forEach(({ image }) => {
                     const img = new Image();
                     img.src = image;
@@ -29,7 +28,6 @@ function Attractions() {
         fetchimage()
     }, []);
 
-
     const settings = {
         dots: false,
         infinite: true,
@@ -38,7 +36,7 @@ function Attractions() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        pauseOnHover: false,
+        pauseOnHover: true,
         cssEase: "ease-in-out",
         swipeToSlide: true,
         draggable: true,
@@ -65,7 +63,7 @@ function Attractions() {
             <Slider {...settings} className="attractions-slider">
                 {image.map((item) => (
                     <div key={item.id} className="attraction-card">
-                        <img src={item.image} alt={item.name} className="attraction-image" loading="lazy" />
+                        <img src={item.image} alt={item.name} className="attraction-image"/>
                         <p className="attraction-name">{item.statename}</p>
                         {isLoggedIn ? (
                             <button className="btn btn-primary btn-more" onClick={() => clicked(item.id)}>More</button>

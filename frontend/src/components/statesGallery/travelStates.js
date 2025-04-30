@@ -11,8 +11,6 @@ import Booking from '../bookingHome/bookinghome';
 import Travelnavbar from '../navbar/travelnavbar';
 import Travelfooter from '../footer/travelfooter';
 
-
-
 function TravelStates() {
   const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,7 +24,7 @@ function TravelStates() {
         const response = await fetch('http://localhost:4000/searchstateimage?filename=state')
         const data = await response.json();
         setImages(data)
-        console.log(data,'destinations');
+        // console.log(data,'destinations');
         
       } catch (error) {
         console.log('images fetching error occured');
@@ -36,14 +34,13 @@ function TravelStates() {
   }, [])
 
   const settings = {
-    // initialSlide: currentIndex,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: (oldIndex, newIndex) => setCurrentIndex(newIndex),
-
   };
+  
   const clicked = () => {
     if (images.length > 0) {
       const selectedState = images[currentIndex];
@@ -102,10 +99,10 @@ function TravelStates() {
           </div>
         ) : (
           <div className="loading-container">
-          {/* <div className="spinner-border text-info mb-3" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div> */}
-          <p className="loading-text text-info">Loading...</p>
+          <div className="spinner-border text-info mb-3" role="status">
+            {/* <span className="visually-hidden">Loading...</span> */}
+          </div>
+          {/* <p className="loading-text text-info">Loading...</p> */}
         </div>
         )}
       </div>

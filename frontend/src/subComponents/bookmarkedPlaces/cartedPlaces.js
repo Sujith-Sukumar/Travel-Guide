@@ -6,7 +6,6 @@ function CartedPlaces() {
   const navigate = useNavigate();
   const [cartPlace, setCartPlace] = useState([]);
   const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [bgUrl, setBgUrl] = useState("");
   
 
@@ -20,7 +19,6 @@ function CartedPlaces() {
       .then(response => response.json())
       .then(data => {
         setCartPlace(data)
-        setIsLoading(false);
       })
       .catch(error => console.error('Error fetching cart data:', error));
   }, []);

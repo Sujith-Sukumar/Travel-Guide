@@ -42,6 +42,7 @@
     justify-content: center;
     border-radius: 10px;
     padding: 25px 20px;
+    border: none;
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
@@ -62,11 +63,12 @@
     /* bottom: 22%; */
     top: 75%;
     left: 50%;
-    border-radius: 10px !important;
+    border-radius: 15px !important;
     transform: translateX(-50%) scale(0.9);
     width: auto;
     padding: 5px 10px !important;
     cursor: pointer;
+    font-weight: 1000;
     opacity: 0;
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
@@ -114,7 +116,7 @@
     }
 
     .attraction-image {
-        height: 250px;
+        height: 300px;
     }
     .btn-more {
         top: 65%;
@@ -132,7 +134,7 @@
     }
 
     .attraction-image {
-        height: 200px;
+        height: 250px;
     }
     .btn-more {
         top: 60%;

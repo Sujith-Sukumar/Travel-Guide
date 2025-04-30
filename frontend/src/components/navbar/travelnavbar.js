@@ -17,8 +17,6 @@ const Travelnavbar = () => {
     const [searchInput, setSearchInput] = useState('');
     const [searchedd, setSearchedd] = useState([])
     const [showSearch, setShowSearch] = useState(false);
-    const [isblack, setIsBlack] = useState(false)
-    const [debouncedValue, setDebouncedValue] = useState('');
 
 
     const inputChange = async (event) => {
@@ -85,7 +83,6 @@ const Travelnavbar = () => {
 
     return (
         <>
-        {/* <body> */}
             <nav className={`navbar navbar-expand-md fixed-top  ${!isVideoHome ? 'black-bg' : ''}`}>
                 <div className="container-fluid position-relative">
                     <a className="navbar-brand" href="#">
@@ -168,14 +165,6 @@ const Travelnavbar = () => {
                                     </div>
                                 )}
                             </div>
-                            {/* <li className="nav-item" style={{ listStyle: 'none', marginLeft: '6px' }}>
-                                {isLoggedIn ? (
-                                    <FaHeart className="icon" onClick={() => navigate('/cartedplaces')} />
-                                ) : (
-                                    <FaHeart className="icon" onClick={() => window.alert(' Login to view your saved bookmarks.')} />
-                                )}
-                            </li> */}
-
                         </div>
                     </div>
 
@@ -255,8 +244,6 @@ const Travelnavbar = () => {
 
                 </div>
             </nav >
-
-            {/* </body> */}
         </>
     );
 };

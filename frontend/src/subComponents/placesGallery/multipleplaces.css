@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: hsl(204, 24%, 96%); */
+    background-color: hsl(204, 24%, 96%);
 }
 
 .gallery-heading {

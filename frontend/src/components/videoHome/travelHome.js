@@ -3,6 +3,7 @@ import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import './travelHome.css'
 
 const VideoPlayer = () => {
+
   const videoUrl = "http://localhost:4000/file/Wildlife.mp4";
   const videoRef = useRef(null);
   const [Muted, setMuted] = useState(true);
@@ -18,15 +19,17 @@ const VideoPlayer = () => {
       setPlaying(!Playing)
     }
   }
+
   const videoMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !Muted;
       setMuted(!Muted);
     }
   };
+
   return (
     <div className="video-container">
-      <video ref={videoRef} className="video" autoPlay loop onClick={videoPlay} muted={Muted}>
+      <video ref={videoRef} className="video" autoPlay loop onClick={videoPlay} muted={Muted} preload="auto">
         <source src={videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -34,4 +37,5 @@ const VideoPlayer = () => {
     </div>
   );
 };
+
 export default VideoPlayer;

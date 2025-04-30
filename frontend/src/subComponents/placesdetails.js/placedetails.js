@@ -112,7 +112,7 @@ function Placedetails() {
         </h1>
         <div className='slide-icon'><a href='#second-page' style={{color:'white'}}><FaArrowAltCircleDown /></a></div>
         {image?.imageUrl && (
-          <img src={image.imageUrl} alt={image.statename} className="details-image" loading="lazy" />
+          <img src={image.imageUrl} alt={image.statename} className="details-image"  />
         )}
       </div>
       <div className="box-container" id='second-page'>
@@ -128,7 +128,7 @@ function Placedetails() {
               )}, Kerala!5e1!3m2!1sen!2sin!4v1741188460467!5m2!1sen!2sin`}
               style={{ border: 0 }}
               allowFullScreen
-              loading="lazy"
+              // loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>

@@ -97,7 +97,7 @@ function CartPlaceDetails() {
             src={imageadd.image}
             alt={image.statename || "Image"}
             className="details-image"
-            loading="lazy"
+            // loading="lazy"
           />
         ) : (
           <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
@@ -129,7 +129,7 @@ function CartPlaceDetails() {
               )}, Kerala!5e1!3m2!1sen!2sin!4v1741188460467!5m2!1sen!2sin`}
               style={{ border: 0 }}
               allowFullScreen
-              loading="lazy"
+              // loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>

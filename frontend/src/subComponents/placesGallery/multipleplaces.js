@@ -40,7 +40,7 @@ function Multipleplaces() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: false,
+    pauseOnHover: true,
     cssEase: "ease-in-out",
     swipeToSlide: true,
     draggable: true,
@@ -80,7 +80,7 @@ function Multipleplaces() {
                   src={item.image}
                   alt={item.name}
                   className="gallery-image"
-                  loading="lazy"
+                  // loading="lazy"
                 />
                 <p className="gallery-name">{item.statename}</p>
                 <button
